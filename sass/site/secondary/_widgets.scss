@@ -1,0 +1,50 @@
+.widget {
+	@include rem(margin, 0 0 20px);
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+
+.blog, .single, .search {
+
+	#secondary {
+
+		aside {
+			background: $light-gray;
+			@include rem(padding, 20px);
+
+			h2 {
+				@include rem(font-size, 20px);
+				text-transform: uppercase;
+				@include rem(margin, 0 0 10px 0);
+				@include rem(padding, 0 0 10px 0);
+				border-bottom: 1px solid rgba(221, 221, 221, 1);
+			}
+
+			ul {
+
+				li {
+
+					a {
+						color: $text-color;
+						transition: color 500ms ease-in-out;
+						
+						&:hover,
+						&:focus,
+						&:active {
+							color: $brand-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}

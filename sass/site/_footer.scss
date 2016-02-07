@@ -1,0 +1,105 @@
+#footer {
+    float: left;
+    width: 100%;
+    background-color: $dark-gray;
+    @include rem(padding, 60px 0);
+
+    .to-top {
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		background: #902829;
+		width: 40px;
+		height: 40px;
+		z-index: 10;
+		text-align: center;
+		color: white;
+		opacity: 0;
+		font-size: 24px;
+		line-height: 40px;
+		transition: opacity 300ms ease-in-out;
+
+		&.show {
+			opacity: 1;
+		}
+	}
+
+    .left {
+		@include span-columns(1);
+		text-align: center;
+
+		@include media ($medium-screen-up) {
+			@include span-columns(4 of 8);
+		}
+
+		@include media ($large-screen-up) {
+			text-align: left;
+			@include span-columns(6 of 12);
+
+			p {
+				margin: 0;
+				line-height: 2.45;
+				color: $white;
+
+				a {
+					color: $white;
+					font-weight: 700;
+					text-decoration: underline;
+				}
+			}
+		}
+    }
+
+    .right {
+		@include span-columns(1);
+		text-align: center;
+		@include rem(margin, 20px 0);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(4 of 8);
+		}
+
+		@include media ($large-screen-up) {
+			text-align: right;
+			margin: 0;
+			@include span-columns(6 of 12);
+		}
+
+		#socilites {
+
+			a {
+			    background-color: $black;
+				color: $white;
+				transition: all 500ms ease-in-out;
+				margin-right: 10px;
+				width: 39px;
+				display: inline-block;
+				padding: 5px 0;
+				text-align: center;
+				font-size: 18px;
+
+				&:hover {
+					background-color: $brand-primary;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+    }
+
+    .credit {
+    	text-align: right;
+    	@include rem(padding, 20px 20px 0 20px);
+
+    	span {
+
+    		a {
+				color: $white;
+				font-weight: 700;
+				text-decoration: underline;
+    		}
+    	}
+    }
+}

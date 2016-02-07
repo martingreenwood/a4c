@@ -1,0 +1,19 @@
+a {
+	color: $brand-primary;
+
+	&:visited {
+		color: $brand-primary;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $brand-primary;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: none;
+	}
+}

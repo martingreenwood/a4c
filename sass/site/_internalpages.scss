@@ -1,0 +1,30 @@
+#page-header {
+	background: $brand-primary;
+	@include rem(padding, 40px 20px);
+	color: white;
+
+	.breadcrumbs {
+		float: right;
+		line-height: 59px;
+		@include rem(font-size, 14px);
+		color: $white;
+
+		span {
+			color: $white;
+		}
+	}
+
+	a {
+		color: $white;
+	}
+	
+	h1 {
+		float: left;
+		margin: 0;
+		clear: none;
+		@include rem(font-size, 50px);
+		line-height: 1.19;
+		color: $white;
+	}
+}
+

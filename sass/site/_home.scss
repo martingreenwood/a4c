@@ -1,0 +1,424 @@
+.home {
+	#masthead {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		z-index: 5;
+		@include rem(padding-bottom, 100px);
+
+		.heading {
+			padding: 0;
+			margin-top: 50px;
+
+			.site-branding {
+
+				a {
+
+				}
+			}
+		}
+	}
+
+	#foreword {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		height: 100vh;
+
+		.wrapper {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.box {
+			text-align: center;
+			padding-bottom: 100px;
+
+			@include span-columns(1);
+			color: white;
+
+			@include media ($medium-screen-up) {
+				@include span-columns(6);		
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(7);
+				@include shift(2.5);
+			}
+
+			.article, .hentry {
+				margin: 0;
+			}
+
+			h1 {
+				margin-top: 0;
+				@include rem(margin-bottom, 30px);
+				@include rem(font-size, 50px);
+				line-height: 1;
+				color: white;
+			}
+
+			p {
+				color: white;
+			}
+
+		}
+
+		.overlay {
+			background: rgba(0,0,0,0.8);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;			
+		}
+
+	}
+
+	#cta {
+		background-color: $brand-primary;
+		color: $white;
+		@include rem(padding, 40px 0);
+
+		.inner {
+
+			.cta-text {
+
+				header {
+					@include span-columns(1);
+
+					@include media ($medium-screen-up) {
+						@include span-columns(3);
+					}
+
+					@include media ($large-screen-up) {
+						@include span-columns(4);
+					}
+
+					h2 {
+						margin: 0;
+						@include rem(font-size, 50px);
+						line-height: 1.5;
+						text-transform: uppercase;
+					}
+				}
+
+				.text {
+					@include span-columns(1);
+
+					@include media ($medium-screen-up) {
+						@include span-columns(3);
+					}
+
+					@include media ($large-screen-up) {
+						@include span-columns(5);
+					}
+
+					p {
+						margin: 0;
+						color: $white;
+						font-weight: 700;
+					}
+				}
+
+				.link {
+					@include span-columns(1);
+
+					@include media ($medium-screen-up) {
+						@include span-columns(2);
+					}
+
+					@include media ($large-screen-up) {
+						@include span-columns(3);
+					}
+
+					a {
+						border: 1px solid $white;
+						background-color: transparent;
+						@include rem(padding, 16px 20px);
+						text-transform: uppercase;
+						font-weight: 700;
+						display: inline-block;
+						color: $white;
+						float: right;
+						transition: all 500ms ease-in-out;
+
+						&:hover {
+							color: $black;
+							border-color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#intro {
+		@include rem(padding, 80px 0);
+
+		.box {
+			@include span-columns(1);
+			
+			@include media ($medium-screen-up) {
+				@include span-columns(8);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			.fa {
+				float: left;
+				@include rem(font-size, 40px);
+				color: $brand-primary;
+				border-right: 2px solid $brand-primary;
+				@include rem(margin-right, 20px);
+				@include rem(width, 70px);
+				text-align: center;
+			}
+
+			h3 {
+				display: inline-block;
+				@include rem(margin-bottom, 20px);
+				@include rem(font-size, 30px);
+				text-transform: uppercase;
+				line-height: 1.35;
+			}
+
+			p {
+				color: $dark-gray;
+				@include rem(padding-left, 90px);
+			}
+		}
+
+	}
+
+	#content {
+		@include rem(padding, 0);
+		
+		#primary {
+			
+			@include span-columns(1);
+			
+			@include media ($medium-screen-up) {
+				@include span-columns(8);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(12 of 12);
+			}
+
+			#hot, #fresh {
+				background-color: $light-gray;
+				@include rem(padding, 80px 0);
+
+				header {
+					@include rem(margin-bottom, 40px);
+
+					h1 {
+						margin: 0;
+						border-left: 2px solid $brand-primary;
+						@include rem(padding-left, 20px);
+						@include rem(font-size, 30px);
+						text-transform: uppercase;
+					}
+				}
+
+				#hot-posts, #fresh-posts {
+					@include row;
+				}
+				
+				.grid-item {
+
+					@include span-columns(1);
+					
+					@include media ($medium-screen-up and max-width $large-screen-up) {
+						@include span-columns(4 of 8);
+						@include omega(2n);
+						margin-bottom: 2.1276595745%;
+					}
+
+					@include media ($large-screen-up) {
+						@include span-columns(4 of 12);
+						@include omega(3n);
+						margin-bottom: 2.1276595745%;
+					}
+					
+					@include rem(padding, 20px 20px 40px);
+					margin-bottom: 2.1276595745%;
+					background-color: $white;
+					position: relative;
+					height: 510px;
+
+					.hentry {
+						margin: 0;
+
+						#image {
+							float: left;
+							width: 100%;
+							@include rem(margin-bottom, 20px);
+						}
+
+						header {
+							float: left;
+							width: 100%;
+							margin: 0;
+
+							h2 {
+								@include rem(margin-bottom, 10px);
+								@include rem(font-size, 25px);
+								line-height: 1.1;
+								text-transform: uppercase;
+							}
+						}
+
+						.entry-content {
+							margin: 0;
+						}
+
+						.entry-footer {
+							position: absolute;
+							max-width: 100%;
+							@include rem(margin-top, 20px);
+							@include rem(bottom, 20px);
+
+							p {
+								margin-bottom: 0;
+
+								&.left {
+									float: left;
+									margin-right: 5px;
+
+									span {
+										color: $brand-primary;
+										font-weight: 700;
+									}
+								}
+							}
+
+							ul.post-categories {
+								border-left: 1px solid $dark-gray;
+								float: left;
+								margin-left: 5px;
+								padding-left: 5px;
+
+								li {
+
+									a {
+										color: $dark-gray;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.more {
+					@include row;
+
+					a {
+						border: 1px solid $brand-primary;
+						background-color: transparent;
+						@include rem(padding, 16px 20px);
+						text-transform: uppercase;
+						font-weight: 700;
+						display: inline-block;
+						color: $brand-primary;
+						float: right;
+						transition: all 500ms ease-in-out;
+
+						&:hover {
+							color: white;
+							background-color: $brand-primary;
+						}
+					}
+				}
+			}
+
+			#twitter {
+				background-color: $twitter-blue;
+				@include rem(padding, 60px 0);
+				
+				.icon {
+					text-align: center;
+					@include rem(font-size, 60px);
+					color: $white;
+				}
+
+				.widget {
+					margin: 0;
+					text-align: center;
+
+					h2 {
+						@include rem(margin, 0 0 10px);
+						color: $white;
+						@include rem(font-size, 30px);
+						text-transform: uppercase;
+					}
+
+					.tweets {
+
+						.slick-arrow {
+							position: absolute;
+							opacity: 0;
+							z-index: 2;
+							top: 50%;
+						    background-color: transparent;
+							@include rem(padding, 0 20px);
+							color: $white;
+							@include rem(font-size, 30px);
+							@include rem(margin-top, -24px);
+							transition: opacity 500ms ease-in-out;
+							border: 0;
+
+							&.slick-next {
+								right: 0;
+							}
+
+							&.slick-prev {
+								left: 0;
+							}
+						}
+
+						li {
+							text-align: center;
+							color: $white;
+							@include rem(font-size, 16px);
+							@include rem(padding, 0 100px);
+							outline: none;
+
+							a {
+								font-weight: 700;
+								color: $white;
+								text-decoration: underline;
+							}
+
+							em {
+
+								a {
+									color: $white;
+									@include rem(font-size, 14px);
+									font-weight: 400;
+									text-decoration: none;
+									@include rem(margin-top, 15px);
+									display: inline-block;
+								}
+							}
+						}
+					}
+				}
+
+				&:hover {
+					.widget {
+						.tweets {
+							.slick-arrow {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

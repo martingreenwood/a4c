@@ -1,0 +1,342 @@
+#loader {
+	position: fixed;
+	background-color: $black;
+
+	width: 100%;
+	height: 100%;
+
+	width: 100vw;
+	height: 100vh;
+
+	z-index: 10;
+
+	.mikepad-loading {
+		@include rem(width, 150px);
+		position: absolute;
+		top: 50%;
+		left : 50%;
+		-webkit-transform: translateY(-50%) translateX(-50%);
+		-moz-transform: translateY(-50%) translateX(-50%);
+		-o-transform: translateY(-50%) translateX(-50%);
+		transform: translateY(-50%) translateX(-50%);
+
+		.binding {
+			content : '';
+			@include rem(width, 36px);
+			@include rem(height, 10px);
+			border : 2px solid $brand-primary;
+			margin : 0 auto;
+		}
+
+		.pad {
+			@include rem(width, 36px);
+			@include rem(height, 36px);
+			border : 2px solid $brand-primary;
+			border-top : 0;
+			@include rem(padding, 9px);
+			margin : 0 auto;
+		}
+
+		.line {
+			@include rem(width, 15px);
+			@include rem(margin-top, 4px);
+			border-top : 2px solid $brand-primary;
+			opacity : 0;
+			-webkit-animation : writeline 3s infinite ease-in;
+			-moz-animation : writeline 3s infinite ease-in;
+			-o-animation : writeline 3s infinite ease-in;
+			animation : writeline 3s infinite ease-in;
+
+			&:first-child {
+				margin-top : 0;
+			}
+
+			&.line1 {
+				-webkit-animation-delay: 0s;
+				-moz-animation-delay: 0s;
+				-o-animation-delay: 0s;
+				animation-delay: 0s;
+			}
+
+			&.line2 {
+				-webkit-animation-delay: 0.5s;
+				-moz-animation-delay: 0.5s;
+				-o-animation-delay: 0.5s;
+				animation-delay: 0.5s;
+			}
+
+			&.line3 {
+				-webkit-animation-delay: 1s;
+				-moz-animation-delay: 1s;
+				-o-animation-delay: 1s;
+				animation-delay : 1s;
+			}
+		}
+
+		.text {
+			text-align : center;
+			@include rem(margin-top, 10px);
+			@include rem(font-size, 16px);
+			color : $white;
+			font-weight: 700;
+		}
+	}
+}
+
+#masthead {
+	background: black;
+	position: relative;
+
+	.overlay {
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#top {
+		background: $pink;
+		color: $white;
+	    position: absolute;
+	    width: 100%;
+	    top: -40px;
+	    height: 40px;
+	    z-index: 10;
+	    transition: all 500ms ease-in-out;
+
+	    &.show {
+	    	top: 0;    	
+	    }
+
+		.toggle {
+			position: absolute;
+			right: 0;
+			@include rem(bottom, -45px);
+			@include rem(padding, 10px 15px);
+			line-height: 1;
+			@include rem(font-size, 25px);
+			background: $pink;
+			color: white;
+			z-index: 10;
+
+			&.active,
+			&.focus,
+			&:hover {
+				color: white;
+				outline: 0;
+			}
+		}
+
+		.helper {
+
+		}
+
+		.inner {
+			position: relative;
+			max-width: 100%;
+			@include rem(padding, 0 0 0 20px);
+		}
+
+		a {
+			color: #ffffff;
+			transition: color 300ms ease-in-out;
+
+			&:hover {
+				color: black;
+			}
+		}
+
+		.reciteme {
+			display: inline-block;
+		    cursor: pointer;
+		    color: white;
+		    transition: color 300ms ease-in-out;
+
+		    &:hover {
+		    	color: black;
+		    }
+		}
+
+		.left {
+			float: left;
+
+			.widget {
+				margin-bottom: 0;
+				display: inline-block;
+
+				ul {
+
+					li {
+						display: inline-block;
+
+						a {
+							color: $white;
+							transition: color 500ms ease-in-out;
+
+							span {
+								margin-right: 10px;
+								color: inherit;
+							}
+
+							&:hover {
+								color: $black;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.right {
+			float: right;
+		}
+
+		a {
+			line-height: 2.5;
+			@include rem(margin-right, 20px);
+
+			&.skip-link {
+				
+			}
+			&.login-link {
+				
+			}
+		}
+
+		.top-sidebar {
+			float: right;
+
+			p {
+				margin-bottom: 0;
+
+				a {
+					margin-right: 0;
+				}
+			}
+
+			#search-link {
+				float: right;
+				margin: 0;
+				padding: 0 10px;
+				transition: all 500ms ease-in-out;
+			}
+
+			#search-box {
+				position: absolute;
+				z-index: 27;
+				background: $pink;
+				right: 0;
+				@include rem(top, 40px);
+				height: 0;
+				overflow: hidden;
+				transition: all 500ms ease-in-out;
+
+				&.show {
+					@include rem(height, 102px);
+				}
+
+				form {
+				    @include rem(padding, 30px);
+					float: left;
+				}
+
+				label {
+					margin-bottom: 0;
+					float: left;
+
+					input[type="search"] {
+						margin-bottom: 0;
+						float: left;
+						@include rem(padding, 8px);
+						border: 0;
+						color: black;
+						font-weight: 300;
+	    				}
+				}
+				
+				.search-submit {
+					float: left;
+				    @include rem(padding, 8px 15px);
+					border: 0px solid $white;
+					background: $white;
+					color: $black;
+				}
+			}
+
+			&.active,
+			&.focus,
+			&:hover {
+				#search-link {
+					background: $pink;	
+					color: $white;
+					outline: 0;
+				}
+				
+				#search-box {
+					@include rem(height, 102px);
+				}
+			}
+		}
+	}	
+
+	.heading {
+		@include outer-container;
+		@include rem(padding, 40px 0);
+		position: relative;
+		z-index: 1;
+
+		.site-branding {
+			float: left;
+			width: 100%;
+			text-align: center;
+			@include rem(padding, 0 0 50px 0);
+			position: relative;
+
+			a {
+				display: block;
+				width: 200px;
+				margin: 0 auto;				
+			}
+
+			img {
+				display: block;
+				max-width: 100%;
+				width: 200px;
+				height: auto;
+				margin: 0 auto;
+			}
+
+			h1 {    
+				margin: 0;
+			}
+		}		
+	}
+}
+
+.home {
+
+	#masthead {
+		background: none;
+	}
+
+	.heading {
+
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+// NO SVG
+
+.no-svg {
+
+	#masthead {
+
+		.site-branding {
+			background-image: url('assets/logo.png');
+		}
+	}
+}

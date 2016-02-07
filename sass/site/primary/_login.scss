@@ -1,0 +1,43 @@
+.wp-social-login-provider-list {
+    padding: 0;
+}
+
+.wp-social-login-connect-with {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.wp-social-login-widget {
+    margin-bottom: 20px;
+}
+
+.wp-social-login-provider {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+
+    .fa {
+		width: 20px;
+    }
+
+    &:hover, &:visited {
+    	color: white;
+    }
+
+    &.wp-social-login-provider-facebook {
+    	background: #3b5998;
+    }
+    
+    &.wp-social-login-provider-google {
+    	background: #F90101;
+    	
+    }
+    
+    &.wp-social-login-provider-twitter {
+    	background: #4099FF;
+    }
+}
+

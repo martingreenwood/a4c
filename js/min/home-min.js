@@ -1,0 +1,1 @@
+var $j=jQuery;$j(window).on("resize",function(){var e=$j(window).height(),i=$j("#masthead").height(),r=e-i;$j("#slider, .slide #feature-image").height(r)}).trigger("resize");

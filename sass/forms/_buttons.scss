@@ -1,0 +1,19 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid $brand-primary;
+	background: transparent;
+	color: $brand-primary;
+	transition: all 500ms ease-in-out;
+
+	&:hover {
+		border: 1px solid $brand-primary;
+		background: $brand-primary;
+		color: $white;
+	}
+
+	&:active,
+	&:focus {
+	}
+}

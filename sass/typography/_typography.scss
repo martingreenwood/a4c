@@ -1,0 +1,16 @@
+p,
+span,
+li,
+button,
+input,
+select,
+textarea {
+	color: $text-color;
+	font-family: $base-font-family;
+	line-height: $base-line-height;
+	font-weight: 400;
+}
+
+@import "headings";
+
+@import "copy";

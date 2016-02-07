@@ -1,0 +1,63 @@
+// Typography
+// /bourbon/addons/_font-stacks.scss
+$base-font-family: $arial;
+$pre-font-family: $arial;
+$heading-font-family: $helvetica-con;
+
+// Line height
+$base-line-height: 1.625;
+$pre-line-height: $base-line-height;
+$heading-line-height: 1.825;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+
+$red: #902829;
+$blue: #363555;
+$pink: #8e1a36;
+
+$brand-primary: $red;
+$brand-primary90: rgba(145, 41, 42, 0.9);
+
+$text-color: #2a292c;
+
+$dark-gray: #2a292c;
+$dark-gray90: rgba(43, 42, 44, 0.9);
+
+$medium-gray: #999999;
+
+$light-gray: rgba(249, 249, 249, 1);
+
+$white: #ffffff;
+$black: #000000;
+$black50: rgba(0, 0, 0, 0.5);
+
+
+$twitter-blue: rgba(85, 172, 238, 1);
+
+
+// Backgrounds
+$base-background-color: $white;
+$base-background-hr: $dark-gray;
+
+$footer-background: $dark-gray;
+$pre-background: $light-gray;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $brand-primary;
+
+// Border
+$base-border-color: $medium-gray;
+$base-border: 1px solid $base-border-color;
+$abbr-border-color: $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px $dark-gray;
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$button-border: $black;
