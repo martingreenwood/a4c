@@ -14,26 +14,25 @@ get_header(); ?>
 	
 		<div class="overlay"></div>
 
-			<div class="wrapper">
-				<div class="inner">
-					<div class="box">
-						<?php while ( have_posts() ) : the_post(); ?>
+	</div>
+	
+	<div id="intro">
+		<div class="wrapper">
+			<div class="inner">
+		
+				<div class="box">
+					<?php while ( have_posts() ) : the_post(); ?>
 
-							<?php
-								get_template_part( 'template-parts/content', 'page' );
-							?>
+						<?php
+							get_template_part( 'template-parts/content', 'page' );
+						?>
 
-						<?php endwhile; ?>
-
-					</div>
+					<?php endwhile; ?>
 				</div>
 			</div>
-			
 		</div>
 
-	</div>
-
-	<?php if( have_rows('cta') ): ?>
+<?php if( have_rows('cta') ): ?>
 	<div id="cta">
 
 		<div class="inner">
@@ -47,27 +46,11 @@ get_header(); ?>
 					<p><?php the_sub_field('text'); ?></p>
 				</div>
 				<div class="link">
-					<a href="<?php the_sub_field('link'); ?>" title="Read more about - <?php the_sub_field('title'); ?>">lobortis accumsan dui</a>
+					<a href="<?php the_sub_field('link'); ?>" title="Read more about - <?php the_sub_field('title'); ?>">Submit an Article</a>
 				</div>
 			</div>
 			<?php endwhile; ?>
 
-		</div>
-
-	</div>
-	<?php endif; ?>
-
-	<?php if( have_rows('homepage_boxes') ): ?>
-	<div id="intro">
-
-		<div class="inner">
-		<?php while ( have_rows('homepage_boxes') ) : the_row(); ?>
-			<div class="box">
-				<?php the_sub_field('icon'); ?>
-				<h3><?php the_sub_field('heading'); ?></h3>
-				<p><?php the_sub_field('text'); ?></p>
-			</div>
-			<?php endwhile; ?>
 		</div>
 
 	</div>

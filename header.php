@@ -53,20 +53,15 @@
 				<div class="inner">
 
 					<div class="left">
-						<a title="Skip to content" class="skip-link" href="#content"><i class="fa fa-angle-down"></i> <?php esc_html_e( 'Skip to content', 'ramps' ); ?></a>
-						<a title="Skip to footer" class="skip-link" href="#colophon"><i class="fa fa-angle-down"></i> <?php esc_html_e( 'Skip to footer', 'ramps' ); ?></a>
+						<a title="Skip to content" class="skip-link" href="#content"><i class="fa fa-angle-down"></i> <?php esc_html_e( 'Skip to content', 'a4c' ); ?></a>
+						<a title="Skip to footer" class="skip-link" href="#colophon"><i class="fa fa-angle-down"></i> <?php esc_html_e( 'Skip to footer', 'a4c' ); ?></a>
 
 						<div class="reciteme"><i class="fa fa-toggle-on"></i> Enable Recite</div>
 
 						<?php //dynamic_sidebar( 'Top Sidebar' ); ?>
 
 					</div>
-
-					<div class="top-sidebar">
-						<a id="search-link" href=""><i class="fa fa-search"></i></a>
-						<div id="search-box"><?php get_search_form('true'); ?></div>
-					</div><!-- #second sidebar -->
-
+					
 				</div>
 
 			</div>

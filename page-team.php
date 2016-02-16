@@ -25,23 +25,8 @@ get_header(); ?>
 		</div>
 	</header><!-- .entry-header -->
 
-	<div id="content" class="site-content inner">
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'template-parts/content', 'meet-the-agents' ); ?>
-
-				<?php endwhile; // End of the loop. ?>
-
-			</main><!-- #main -->
-		</div><!-- #primary -->
-
-	</div>
-
-	<section id="staff">
+	<section id="team-full">
 
 		<div class="inner">	
 
@@ -50,7 +35,7 @@ get_header(); ?>
 			</header>
 
 			<?php 
-			$staff_args = array( 'post_type' => 'staff', 'posts_per_page' => 3 ); 
+			$staff_args = array( 'post_type' => 'staff', 'posts_per_page' => 9 ); 
 			$staff_loop = new WP_Query( $staff_args ); 
 			while ( $staff_loop->have_posts() ) : $staff_loop->the_post(); ?>
 				
@@ -83,45 +68,13 @@ get_header(); ?>
 			</div>
 
 			<?php 
-			endwhile; 
+			endwhile;
 			wp_reset_query();
 			?>
 		</div>
 
-		<div class="inner">
-			<div class="more">
-				<a title="Meet the rest of the team at An Agent for Change" href="<?php echo esc_url( home_url( '/team' ) ); ?>">Meet the Rest</a>
-			</div>
-		</div>
 
 	</section>
 
-	<section id="change">
-		
-		<div class="inner">
-			
-			<header>
-				<h2><?php the_field('additional_content_header'); ?></h2>
-			</header>
-			<?php
-
-			if( have_rows('additional_content_columns') ):
-		    while ( have_rows('additional_content_columns') ) : the_row(); ?>
-
-			<div class="text">
-				<?php the_sub_field('column_one'); ?>
-			</div>
-			<div class="text">
-				<?php the_sub_field('column_two'); ?>
-			</div>
-
-		    <?php 
-		    endwhile;
-			endif;
-			?>
-
-		</div>
-
-	</section>
 
 <?php get_footer(); ?>

@@ -4,26 +4,6 @@
     background-color: $dark-gray;
     @include rem(padding, 60px 0);
 
-    .to-top {
-		position: fixed;
-		right: 30px;
-		bottom: 30px;
-		background: #902829;
-		width: 40px;
-		height: 40px;
-		z-index: 10;
-		text-align: center;
-		color: white;
-		opacity: 0;
-		font-size: 24px;
-		line-height: 40px;
-		transition: opacity 300ms ease-in-out;
-
-		&.show {
-			opacity: 1;
-		}
-	}
-
     .left {
 		@include span-columns(1);
 		text-align: center;

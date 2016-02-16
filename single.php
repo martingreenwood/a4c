@@ -20,7 +20,7 @@ get_header(); ?>
 		</div>
 	</header><!-- .entry-header -->
 
-	<div id="content" class="site-content inner">
+	<div id="content" class="site-content inner internal">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 

@@ -47,7 +47,7 @@
 				$post_categories = $cats;
 			}
 			?>
-			<p class="left"><span><?php echo get_the_date(); ?></span></p><p class="left">| <span class="screen-reader-text">Posted in </span><?php echo $post_categories[0]; //the_category(); ?></p>
+			<p class="left"><span><?php echo get_the_date(); ?></span> | Posted in: <?php echo $post_categories[0]; //the_category(); ?></p>
 		</footer><!-- .entry-footer -->
 		
 	</article><!-- #post-## -->

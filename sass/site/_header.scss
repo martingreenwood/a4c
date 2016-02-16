@@ -141,22 +141,15 @@
 
 		a {
 			color: #ffffff;
-			transition: color 300ms ease-in-out;
 
 			&:hover {
 				color: black;
+				text-decoration: underline;
 			}
 		}
 
 		.reciteme {
 			display: inline-block;
-		    cursor: pointer;
-		    color: white;
-		    transition: color 300ms ease-in-out;
-
-		    &:hover {
-		    	color: black;
-		    }
 		}
 
 		.left {

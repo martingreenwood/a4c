@@ -81,6 +81,7 @@
 						.entry-footer {
 							width: 100%;
 
+
 							p {
 								margin-bottom: 0;
 
@@ -146,6 +147,28 @@
 				float: left;
 				width: 100%;
 			}
+		}
+	}
+}
+
+// SINGLE POST
+
+
+.post {
+
+	.entry-header {
+
+		.entry-meta {
+			@include rem(padding, 20px 0);
+		}
+	}
+
+	.entry-footer {
+		@include rem(padding, 20px 0);
+
+		.edit-link {
+			float: right;
+			@include rem(padding-right, 3px);
 		}
 	}
 }
@@ -308,7 +331,7 @@
 				h3 {
 					line-height: 1.2;
 					margin: 0;
-					@include rem(font-size, 23px);
+					@include rem(font-size, 27px);
 					text-transform: uppercase;
 				}
 
@@ -383,6 +406,117 @@
 	}		
 }
 
+// TEAM PAGE
+
+#team-full {
+
+	@include rem(padding-top, 80px);
+	@include rem(padding-bottom, 80px);
+	background: $light-gray;
+
+	header {
+		@include rem(margin, 0 0 40px 0);
+
+		h2 {
+			border-left: 2px solid $brand-primary;
+			@include rem(padding-left, 20px);
+			@include rem(font-size, 30px);
+			text-transform: uppercase;
+			@include rem(margin, 0);
+		}
+	}
+
+	.staff-member {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+				@include omega(4n);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			.image {
+				position: relative;
+				display: block;
+
+
+				img {
+					display: block;
+				}
+
+				.overlay {
+					position: absolute;
+					top: 0;
+					opacity: 0;
+					text-align: center;
+					background: $dark-gray90;
+					width: 100%;
+					height: 100%;
+					@include rem(padding, 40px 20px);
+					transition: opacity 500ms ease-in-out;
+
+					p {
+						color: $white;
+					}
+					
+					.social {
+
+						li {
+							display: inline-block;
+							background: $black;
+							@include rem(margin, 0 2px);
+							@include rem(padding, 5px 11px);
+							@include rem(width, 36px);
+							transition: background 500ms ease-in-out;
+
+							&:hover {
+								background: $brand-primary;
+							}
+
+							a {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+
+			.text {
+				background: $white;
+				@include rem(padding, 20px);
+				text-align: center;
+
+				h3 {
+					line-height: 1.2;
+					margin: 0;
+					@include rem(font-size, 27px);
+					text-transform: uppercase;
+				}
+
+				h4 {
+					margin: 0;
+					@include rem(font-size, 15px);
+					@include rem(margin, 0 20px);
+					color: $brand-primary;
+					line-height: 1.2;
+					font-family: $arial;
+				}
+			}
+
+			&:hover {
+
+				.overlay {
+					opacity: 1;
+				}
+			}
+		}
+
+}
+
+// GETTING INVOLVED
 
 #getting-involved {
 
@@ -516,6 +650,20 @@
 								display: none;
 							}
 						}
+
+						.gfield_label {
+						@include rem(padding, 15px 0);
+						}
+					}
+
+					#field_1_4, #field_1_2 {
+						width: 49.5%;
+						float: left;
+						@include rem(margin-right, 0);
+					}
+
+					#field_1_2 {
+						@include rem(margin-right, 11px);
 					}
 				}
 			}
@@ -538,6 +686,16 @@
 
 			@include media ($large-screen-up) {
 				@include span-columns(6);
+			}
+
+			.gform_body {
+
+				.gform_fields {
+
+					.gfield_label {
+						@include rem(padding, 15px 0);
+					}
+				}
 			}
 
 		}
