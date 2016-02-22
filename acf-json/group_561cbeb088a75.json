@@ -1,0 +1,40 @@
+{
+    "key": "group_561cbeb088a75",
+    "title": "Feature Video",
+    "fields": [
+        {
+            "key": "field_561cbfa8a4c96",
+            "label": "Feature Video",
+            "name": "feature_video_url",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "1086"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Feature Video for the about page.",
+    "modified": 1455985534
+}

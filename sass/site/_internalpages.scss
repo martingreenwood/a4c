@@ -25,6 +25,13 @@
 		@include rem(font-size, 50px);
 		line-height: 1.19;
 		color: $white;
+
+		span {
+			color: inherit;
+			font-family: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+		}
 	}
 }
 

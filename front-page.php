@@ -11,9 +11,52 @@ $HPBGimg = get_field('hompage_bg_image', 'option');
 get_header(); ?>
 
 	<div id="foreword" <?php if ($HPBGimg): ?>style="background-image: url(<?php echo $HPBGimg['url']; ?>);"<?php endif; ?>>
-	
 		<div class="overlay"></div>
 
+		<?php if(get_field('homepage_video')): ?>
+		<div class="box">
+		<div class="video">
+			<div class="playme">
+				<a href="#" title="Press or click to play introductary video">
+					<i class="fa fa-play"></i>
+					<p class="screen-reader-text">Press or click to play introductary video</p>
+				</a>
+			</div>
+			<div class="embed-container">
+			<?php 
+			// get iframe HTML
+			$iframe = get_field('homepage_video');
+			
+			// use preg_match to find iframe src
+			preg_match('/src="(.+?)"/', $iframe, $matches);
+			$src = $matches[1];
+
+			// add extra params to iframe src
+			$params = array(
+			    'controls'		=> 1,
+			    'hd'        	=> 1,
+			    'rel'			=> 0,
+			    'showinfo'		=> 0,
+			    'autohide'    	=> 1
+			);
+
+			$new_src = add_query_arg($params, $src);
+
+			$iframe = str_replace($src, $new_src, $iframe);
+
+			// add extra attributes to iframe html
+			$attributes = 'frameborder="0" id="introvid" width="1280" height="720"';
+
+			$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+			// echo $iframe
+			echo $iframe;
+
+			?>
+			</div>
+		</div>
+		</div>
+		<?php endif; ?>
 	</div>
 	
 	<div id="intro">
@@ -31,30 +74,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-
-<?php if( have_rows('cta') ): ?>
-	<div id="cta">
-
-		<div class="inner">
-			
-			<?php while ( have_rows('cta') ) : the_row(); ?>
-			<div class="cta-text">
-				<header>
-					<h2><?php the_sub_field('title'); ?></h2>
-				</header>
-				<div class="text">
-					<p><?php the_sub_field('text'); ?></p>
-				</div>
-				<div class="link">
-					<a href="<?php the_sub_field('link'); ?>" title="Read more about - <?php the_sub_field('title'); ?>">Submit an Article</a>
-				</div>
-			</div>
-			<?php endwhile; ?>
-
-		</div>
-
 	</div>
-<?php endif; ?>
 
 	<div id="content" class="site-content">
 	

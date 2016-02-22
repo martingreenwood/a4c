@@ -1,0 +1,57 @@
+{
+    "key": "group_56b0c4be35527",
+    "title": "URL to share.",
+    "fields": [
+        {
+            "key": "field_56ca2d28f6eb3",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This can be a URL to an article on a third party website (York Online, Daily Mail) a link to a video on Youtube, Video o even a link to a Facebook or Twitter Post. Please check the URL before publishing the Article.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_56b0c4c40e6c2",
+            "label": "",
+            "name": "embedly",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Video for Post (submitted)",
+    "modified": 1456090901
+}

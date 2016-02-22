@@ -8,12 +8,28 @@
 }
 
 /* Search widget. */
-.widget_search .search-submit {
-	display: none;
+.widget_search  {
+
+	label {
+	    margin-bottom: 0;
+	}
+
+	.search-field {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		margin: 0;
+	}
+
+    .search-submit {
+    	display: none;
+    }
 }
 
 
-.blog, .single, .search {
+
+//.blog, .single, .search {
 
 	#secondary {
 
@@ -27,6 +43,8 @@
 				@include rem(margin, 0 0 10px 0);
 				@include rem(padding, 0 0 10px 0);
 				border-bottom: 1px solid rgba(221, 221, 221, 1);
+			    border-left: 0;
+    			line-height: 1;
 			}
 
 			ul {
@@ -47,4 +65,4 @@
 			}
 		}
 	}
-}
+//}

@@ -12,6 +12,26 @@
 		ul {
 
 			li {
+				position: relative;
+				margin-bottom: 20px;
+				float: left;
+				width: 100%;
+
+				&#field_4_1 > label {
+					display: none;
+				}
+
+				.ginput_complex span {
+				    width: 48.5%;
+				}
+
+				.charleft.ginput_counter {
+					position: absolute;
+					bottom: 15px;
+					right: 20px;
+					font-size: 11px;
+					color: #666;
+				}
 
 				&.gform_validation_container {
 					display: none;
@@ -20,7 +40,7 @@
 				.ginput_complex {
 
 					span {
-						width: 49.5%;
+						width: 49.25%;
 
 						input {
 							width: 100%;
@@ -45,6 +65,30 @@
 				input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea, select[multiple=multiple], textarea {
 					border-color: #eee;
 					width: 100%; 
+				}
+			}
+
+			&.gform_fields {
+
+				span {
+					position: relative;
+				}
+
+				label {
+					padding: 0;
+					text-transform: uppercase;
+					font-size: 11px;
+					font-weight: 600;
+					position: absolute;
+					top: 6px;
+					left: 10px;
+					color: #878787;
+					z-index: 5;
+				}
+
+				input, textarea {
+				    padding: 24px 10px 5px;
+				    margin-bottom: 0;
 				}
 			}
 		}

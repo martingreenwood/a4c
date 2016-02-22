@@ -1,0 +1,40 @@
+{
+    "key": "group_56c88653a7174",
+    "title": "Homepage Video.",
+    "fields": [
+        {
+            "key": "field_56c886609e2bd",
+            "label": "",
+            "name": "homepage_video",
+            "type": "oembed",
+            "instructions": "Paste you youtube video url here to have it display on the website. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1455982261
+}

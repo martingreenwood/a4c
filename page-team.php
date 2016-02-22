@@ -34,16 +34,19 @@ get_header(); ?>
 				<h2>Meet The Agents</h2>
 			</header>
 
+			<div class="staff-profiles">
 			<?php 
 			$staff_args = array( 'post_type' => 'staff', 'posts_per_page' => 9 ); 
 			$staff_loop = new WP_Query( $staff_args ); 
 			while ( $staff_loop->have_posts() ) : $staff_loop->the_post(); ?>
 				
 			<div class="staff-member">
+				
 				<div class="image">
 					<?php the_post_thumbnail(); ?>
 					<div class="overlay">
 						<?php the_excerpt(); ?>
+						<a class="button" href="<?php the_permalink(); ?>">Read More about <?php the_title(); ;?></a>
 						<ul class="social">
 							<li>
 								<a href="<?php the_field('facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -62,18 +65,19 @@ get_header(); ?>
 				</div>
 
 				<div class="text">
-					<?php the_title('<h3>', '</h3>'); ?>
-					<h4><?php the_field('job_title'); ?></h4>
+					<a href="<?php the_permalink(); ?>">
+						<?php the_title('<h3>', '</h3>'); ?>
+						<h4><?php the_field('job_title'); ?></h4>
+					</a>
 				</div>
-			</div>
 
+			</div>
 			<?php 
 			endwhile;
 			wp_reset_query();
 			?>
+			</div>
 		</div>
-
-
 	</section>
 
 

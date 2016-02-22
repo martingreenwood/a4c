@@ -11,12 +11,37 @@
 
 ?>
 
+
+	<?php if( have_rows('cta', 'option') ): ?>
+	<div id="cta">
+
+		<div class="inner">
+			
+			<?php while ( have_rows('cta', 'option') ) : the_row(); ?>
+			<div class="cta-text">
+				<header>
+					<h3><?php the_sub_field('title'); ?></h3>
+				</header>
+				<div class="text">
+					<p><?php the_sub_field('text'); ?></p>
+				</div>
+				<div class="link">
+					<a href="<?php the_sub_field('link'); ?>" title="Read more about - <?php the_sub_field('title'); ?>">Submit an Article</a>
+				</div>
+			</div>
+			<?php endwhile; ?>
+
+		</div>
+
+	</div>
+	<?php endif; ?>
+
 	<footer id="footer" class="site-footer" role="contentinfo">
 		
 		<div class="site-info inner">
 			
 			<div class="left">
-				<p>&copy; <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>. All Rights Reserved. <a title="Back to top" class="skip-link" href="#masthead"><i class="fa fa-angle-up"></i> <?php esc_html_e( 'Back to top', 'a4c' ); ?></a></p>
+				<p>&copy; <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>. All Rights Reserved. <a title="Back to top" class="skip-link" href="#masthead"><?php esc_html_e( 'Back to top', 'a4c' ); ?></a></p>
 			</div>
 			
 			<div class="right">

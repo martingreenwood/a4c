@@ -24,9 +24,7 @@
 		overflow: hidden;
 		height: 100%;
 		height: 100vh;
-		min-height: 768px;
-
-		
+		min-height: 768px;		
 
 		.overlay {
 			background: rgba(0,0,0,0.8);
@@ -37,6 +35,19 @@
 			height: 100%;			
 		}
 
+		.box {
+			position: absolute;
+			bottom: 40px;
+			width: 600px;
+			left: 50%;
+			margin-left: -300px;
+
+			display: none;
+
+			@include media ($large-screen-up) {
+				display: block;
+			}
+		}
 	}
 
 	#intro {
@@ -82,87 +93,6 @@
 
 	}
 
-	#cta {
-		background-color: $brand-primary;
-		color: $white;
-		@include rem(padding, 40px 0);
-
-		.inner {
-
-			.cta-text {
-
-				header {
-					@include span-columns(1);
-
-					@include media ($medium-screen-up) {
-						@include span-columns(3);
-					}
-
-					@include media ($large-screen-up) {
-						@include span-columns(4);
-					}
-
-					h2 {
-						margin: 0;
-						@include rem(font-size, 50px);
-						line-height: 1.2;
-						text-transform: uppercase;
-					}
-				}
-
-				.text {
-					@include span-columns(1);
-
-					@include media ($medium-screen-up) {
-						@include span-columns(3);
-					}
-
-					@include media ($large-screen-up) {
-						@include span-columns(5);
-					}
-
-					p {
-						margin: 0;
-						color: $white;
-						font-weight: 700;
-						line-height: 1.2;
-						@include rem(padding, 11px 0);
-					}
-				}
-
-				.link {
-					@include span-columns(1);
-
-					@include media ($medium-screen-up) {
-						@include span-columns(2);
-					}
-
-					@include media ($large-screen-up) {
-						@include span-columns(3);
-					}
-
-					a {
-						border: 1px solid $white;
-						background-color: transparent;
-						@include rem(padding, 16px 20px);
-						text-transform: uppercase;
-						font-weight: 700;
-						display: inline-block;
-						color: $white;
-						float: right;
-						transition: all 500ms ease-in-out;
-
-						&:hover {
-							color: $black;
-							border-color: $black;
-						}
-					}
-				}
-			}
-		}
-	}
-
-
 	#content {
 		@include rem(padding, 0);
 		
@@ -176,132 +106,6 @@
 
 			@include media ($large-screen-up) {
 				@include span-columns(12 of 12);
-			}
-
-			#hot, #fresh {
-				background-color: $light-gray;
-				@include rem(padding, 80px 0);
-
-				header {
-					@include rem(margin-bottom, 40px);
-
-					h1 {
-						margin: 0;
-						border-left: 2px solid $brand-primary;
-						@include rem(padding-left, 20px);
-						@include rem(font-size, 30px);
-						text-transform: uppercase;
-					}
-				}
-
-				#hot-posts, #fresh-posts {
-					@include row;
-				}
-				
-				.grid-item {
-
-					@include span-columns(1);
-					
-					@include media ($medium-screen-up and max-width $large-screen-up) {
-						@include span-columns(4 of 8);
-						@include omega(2n);
-						margin-bottom: 2.1276595745%;
-					}
-
-					@include media ($large-screen-up) {
-						@include span-columns(4 of 12);
-						@include omega(3n);
-						margin-bottom: 2.1276595745%;
-					}
-					
-					@include rem(padding, 20px 20px 40px);
-					margin-bottom: 2.1276595745%;
-					background-color: $white;
-					position: relative;
-					height: 510px;
-
-					.hentry {
-						margin: 0;
-
-						#image {
-							float: left;
-							width: 100%;
-							@include rem(margin-bottom, 20px);
-						}
-
-						header {
-							float: left;
-							width: 100%;
-							margin: 0;
-
-							h2 {
-								@include rem(margin-bottom, 10px);
-								@include rem(font-size, 25px);
-								line-height: 1.1;
-								text-transform: uppercase;
-							}
-						}
-
-						.entry-content {
-							margin: 0;
-						}
-
-						.entry-footer {
-							position: absolute;
-							width: 100%;
-							@include rem(margin-top, 20px);
-							@include rem(bottom, 20px);
-
-							p {
-								margin-bottom: 0;
-
-								&.left {
-									float: left;
-
-									span {
-										color: $brand-primary;
-										font-weight: 700;
-									}
-								}
-							}
-
-							ul.post-categories {
-								border-left: 1px solid $dark-gray;
-								float: left;
-								margin-left: 5px;
-								padding-left: 5px;
-
-								li {
-
-									a {
-										color: $dark-gray;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				.more {
-					@include row;
-
-					a {
-						border: 1px solid $brand-primary;
-						background-color: transparent;
-						@include rem(padding, 16px 20px);
-						text-transform: uppercase;
-						font-weight: 700;
-						display: inline-block;
-						color: $brand-primary;
-						float: right;
-						transition: all 500ms ease-in-out;
-
-						&:hover {
-							color: white;
-							background-color: $brand-primary;
-						}
-					}
-				}
 			}
 
 			#twitter {
@@ -319,9 +123,12 @@
 					text-align: center;
 
 					h2 {
-						@include rem(margin, 0 0 10px);
-						color: $white;
 						@include rem(font-size, 30px);
+						@include rem(margin, 0 0 20px);
+						padding: 0;
+						border: 0;
+						line-height: 1;
+						color: white;
 						text-transform: uppercase;
 					}
 
@@ -386,6 +193,135 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+#hot, #fresh {
+	background-color: $light-gray;
+	@include rem(padding, 80px 0);
+
+	header {
+		@include rem(margin-bottom, 40px);
+
+		h1 {
+			margin: 0;
+			border-left: 2px solid $brand-primary;
+			@include rem(padding-left, 20px);
+			@include rem(font-size, 30px);
+			text-transform: uppercase;
+		}
+	}
+
+	#hot-posts, #fresh-posts {
+		@include row;
+	}
+	
+	.grid-item {
+
+		@include span-columns(1);
+		
+		@include media ($medium-screen-up and max-width $large-screen-up) {
+			@include span-columns(4 of 8);
+			@include omega(2n);
+			margin-bottom: 2.1276595745%;
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(4 of 12);
+			@include omega(3n);
+			margin-bottom: 2.1276595745%;
+		}
+		
+		@include rem(padding, 20px 20px 40px);
+		margin-bottom: 2.1276595745%;
+		background-color: $white;
+		position: relative;
+		height: 510px;
+
+		.hentry {
+			margin: 0;
+
+			#image {
+				float: left;
+				width: 100%;
+				@include rem(margin-bottom, 20px);
+			}
+
+			header {
+				float: left;
+				width: 100%;
+				margin: 0;
+
+				h2 {
+					@include rem(margin-bottom, 10px);
+					@include rem(font-size, 25px);
+					line-height: 1.1;
+					border: 0;
+					padding: 0;
+					text-transform: uppercase;
+				}
+			}
+
+			.entry-content {
+				margin: 0;
+			}
+
+			.entry-footer {
+				position: absolute;
+				width: auto;
+				padding: 0;
+				@include rem(margin-top, 20px);
+				@include rem(bottom, 20px);
+
+				p {
+					margin-bottom: 0;
+
+					&.left {
+						float: left;
+
+						span {
+							color: $brand-primary;
+							font-weight: 700;
+						}
+					}
+				}
+
+				ul.post-categories {
+					border-left: 1px solid $dark-gray;
+					float: left;
+					margin-left: 5px;
+					padding-left: 5px;
+
+					li {
+
+						a {
+							color: $dark-gray;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.more {
+		@include row;
+
+		a {
+			border: 1px solid $brand-primary;
+			background-color: transparent;
+			@include rem(padding, 16px 20px);
+			text-transform: uppercase;
+			font-weight: 700;
+			display: inline-block;
+			color: $brand-primary;
+			float: right;
+			transition: all 500ms ease-in-out;
+
+			&:hover {
+				color: white;
+				background-color: $brand-primary;
 			}
 		}
 	}

@@ -40,4 +40,13 @@ get_header(); ?>
 		</div><!-- #primary -->
 	</div>
 
+	<section id="article-form">
+		<div class="inner">
+		<?php 
+	    	gravity_form_enqueue_scripts(5, true);
+	    	gravity_form(5, false, false, false, '', true, 1); 
+		?>
+		</div>
+	</section>
+
 <?php get_footer(); ?>

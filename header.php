@@ -42,11 +42,11 @@
 
 <div id="page" class="hfeed site">
 	
-	<header id="masthead" class="site-header" role="banner" <?php if(!is_front_page()): ?>style="background-image: url(<?php echo $feat_image; ?>);"<?php endif; ?>>
+	<header id="masthead" class="site-header" role="banner">
 
 		<div id="top">
 			
-			<a class="toggle" title="Open Sidebar" href=""><span class="screen-reader-text">Open Sidebar</span><i class="fa fa-angle-double-down"></i></a>
+			<a class="toggle" title="Open Sidebar" href=""><span class="screen-reader-text">Open Sidebar</span><i class="fa fa-angle-down"></i></a>
 			
 			<div class="helper">
 

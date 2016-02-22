@@ -9,8 +9,7 @@
 
 get_header(); ?>
 
-
-	<div id="content" class="site-content">
+	<div id="content" class="site-content inner internal">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
@@ -24,39 +23,43 @@ get_header(); ?>
 
 						<?php get_search_form(); ?>
 
-						<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-						<?php if ( a4c_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-						<div class="widget widget_categories">
-							<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'a4c' ); ?></h2>
-							<ul>
-							<?php
-								wp_list_categories( array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								) );
-							?>
-							</ul>
-						</div><!-- .widget -->
-						<?php endif; ?>
-
-						<?php
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'a4c' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-						?>
-
-						<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
 					</div><!-- .page-content -->
+
 				</section><!-- .error-404 -->
+
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
 	</div>
+
+	<div id="fresh">
+
+		<div class="inner">
+
+			<header>
+				<h1>FRESH OFF THE PRESS</h1>
+			</header>
+
+			<div id="fresh-posts">
+				<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					$args = array( 'ignore_sticky_posts' => 1, 'posts_per_page' => 3, 'paged' => $paged );
+					$query = new WP_Query( $args );
+					while ( $query->have_posts() ) : $query->the_post();
+					get_template_part( 'template-parts/content', 'fresh' );
+					endwhile;
+					wp_reset_query();
+				?>
+			</div>
+
+			<div class="more">
+				<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">More Articles</a>
+			</div>
+
+		</div>
+
+	</div>
+
 
 <?php get_footer(); ?>

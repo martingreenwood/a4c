@@ -150,15 +150,17 @@ function a4c_scripts() {
 	wp_enqueue_style( 'a4c-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '', true );
-	wp_enqueue_script( 'respond', get_template_directory_uri() . '/js/min/respond-min.js', array(), '', true );
-	wp_enqueue_script( 'a4c-navigation', get_template_directory_uri() . '/js/min/navigation-min.js', array(), '', true );
+  	wp_enqueue_script( 'tinymce', '/wp-includes/js/tinymce/tinymce.min.js', '', '', true );
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', '', '', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', '', '', true );
+	wp_enqueue_script( 'respond', get_template_directory_uri() . '/js/min/respond-min.js', '', '', true );
+	wp_enqueue_script( 'a4c-navigation', get_template_directory_uri() . '/js/min/navigation-min.js', '', '', true );
 
 	wp_enqueue_script( 'recite-js', 'https://api.reciteme.com/asset/js?key=a148cd71bd67b6e9c897aab6b541cbf4425ca2be', '', '', true );
-	wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '', true );	
-	wp_enqueue_script( 'fancy-js', get_template_directory_uri() . '/assets/fancybox/jquery.fancybox.js', array(), '', true );
+	wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', '', '', true );	
+	wp_enqueue_script( 'fancy-js', get_template_directory_uri() . '/assets/fancybox/jquery.fancybox.js', '', '', true );
 
-	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array(), '', true );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', '', '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	wp_enqueue_script( 'comment-reply' );
@@ -191,6 +193,22 @@ Recite.load({
 </script><?php
 }
 add_action('wp_footer', 'reciteMe', 99);
+
+function myTiny() {
+	if(!is_admin())
+	?>
+	<script>
+		tinymce.init({ 
+			selector:'.gf_html textarea',
+			menubar: false,
+			content_css : 'wp-includes/js/tinymce/skins/wordpress/wp-content.css',
+			//plugins: 'link paste table textcolor',
+		});
+	</script>
+	<?php
+}
+add_action('wp_footer', 'myTiny', 99);
+
 
 /**
  * Custom template tags for this theme.

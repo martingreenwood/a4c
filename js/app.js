@@ -1,5 +1,15 @@
 var $j = jQuery;
 
+// DETECT ORIENTATION CHANGE
+$j(window).on("orientationchange",function(){
+	if(window.orientation == 0) {
+		$j(".turnme").addClass('show');
+	}
+	else {
+		$j(".turnme").removeClass('show');
+	}
+});
+
 // SCROLL TO #
 $j(function($) {
 	$j('a[href*=#]:not([href=#])').click(function() {
@@ -16,11 +26,33 @@ $j(function($) {
 	});
 });
 
+// SHOW TO TOP ON SCROLL
+$j(window).scroll(function() {
+	if ($j(window).scrollTop() > 600){
+	    $j('.to-top').addClass('show');
+	} else if ($j(window).scrollTop() < 600){
+		$j('.to-top').removeClass('show');
+	}
+}); 
+
 // REMOVE LOADERING SCREEN ONCE LOADED
 $j(window).load(function() {
 	$j('#loader').fadeOut('fast', function() {
 		$j(this).remove();
 	});
+});
+
+// PLAY VIDEO ON BUTTON PRESS
+$j(function() {
+	$j('.playme a').click(function(event) {
+		event.preventDefault();
+		$j("#introvid")[0].src += "&autoplay=1";
+		$j(this).parent().fadeOut(800);
+		$j('.embed-container').addClass('show');
+  	});
+	setTimeout(function(){ 
+		$j('.playme.hide').css('z-index', '0');
+	},1000)
 });
 
 // FANCYBOX
@@ -42,8 +74,17 @@ $j(function($) {
 	});
 });
 
+// init Masonry
 
-var $j = jQuery;
+var grid = $j('.grid').masonry({
+	itemSelector: '.blog-item',
+	columnWidth: '.grid-sizer',
+	gutter: '.gutter-sizer',
+	percentPosition: true
+});
+grid.imagesLoaded().progress( function() {
+	grid.masonry('layout');
+});
 
 // SLIDERS
 $j(function(){
@@ -62,6 +103,7 @@ $j(function(){
 
 });
 
+// SHOW BACK TO TOP ON SCROLL
 $j(window).scroll(function() {
 
 	if ($j(window).scrollTop() > 600){
@@ -70,8 +112,17 @@ $j(window).scroll(function() {
 		$j('.to-top').removeClass('show');
 	}
 
-}); 
+});
 
+// SUBMIUT FORM
+$j(function(){
+
+	$j('#field_5_7 ul li').on('click', function(event) {
+		event.preventDefault();
+		$j('#field_2_7 ul li').removeClass('active');
+		$j(this).addClass('active');
+	});
+});	
 
 // SLIDER HEIGHT
 $j(window).on('resize',function() {
