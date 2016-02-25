@@ -119,7 +119,7 @@ $j(function(){
 
 	$j('#field_5_7 ul li').on('click', function(event) {
 		event.preventDefault();
-		$j('#field_2_7 ul li').removeClass('active');
+		$j('#field_5_7 ul li').removeClass('active');
 		$j(this).addClass('active');
 	});
 });	

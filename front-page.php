@@ -76,6 +76,29 @@ get_header(); ?>
 		</div>
 	</div>
 
+	<?php if( have_rows('cta', 'option') ): ?>
+	<div id="cta">
+
+		<div class="inner">
+			
+			<?php while ( have_rows('cta', 'option') ) : the_row(); ?>
+			<div class="cta-text">
+				<header>
+					<h3><?php the_sub_field('title'); ?></h3>
+				</header>
+				<div class="text">
+					<p><?php the_sub_field('text'); ?></p>
+				</div>
+				<div class="link">
+					<a href="<?php the_sub_field('link'); ?>" title="Read more about - <?php the_sub_field('title'); ?>">Submit an Article</a>
+				</div>
+			</div>
+			<?php endwhile; ?>
+
+		</div>
+
+	</div>
+	<?php endif; ?>
 	<div id="content" class="site-content">
 	
 		<div id="primary" class="content-area">

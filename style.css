@@ -1214,7 +1214,7 @@ input[type="submit"]:hover {
 }
 /* line 65, sass/forms/_forms.scss */
 .gform_wrapper .gform_body ul li input[type="color"], .gform_wrapper .gform_body ul li input[type="date"], .gform_wrapper .gform_body ul li input[type="datetime"], .gform_wrapper .gform_body ul li input[type="datetime-local"], .gform_wrapper .gform_body ul li input[type="email"], .gform_wrapper .gform_body ul li input[type="month"], .gform_wrapper .gform_body ul li input[type="number"], .gform_wrapper .gform_body ul li input[type="password"], .gform_wrapper .gform_body ul li input[type="search"], .gform_wrapper .gform_body ul li input[type="tel"], .gform_wrapper .gform_body ul li input[type="text"], .gform_wrapper .gform_body ul li input[type="time"], .gform_wrapper .gform_body ul li input[type="url"], .gform_wrapper .gform_body ul li input[type="week"], .gform_wrapper .gform_body ul li textarea, .gform_wrapper .gform_body ul li select[multiple=multiple], .gform_wrapper .gform_body ul li textarea {
-  border-color: #eee;
+  border-color: #e1e2e2;
   width: 100%;
 }
 /* line 73, sass/forms/_forms.scss */
@@ -1719,13 +1719,42 @@ a:hover, a:active {
   display: none;
 }
 
-/* line 36, sass/site/secondary/_widgets.scss */
+/* line 30, sass/site/secondary/_widgets.scss */
+#secondary aside#text-2 {
+  background: #8e1a36;
+  color: white;
+}
+/* line 34, sass/site/secondary/_widgets.scss */
+#secondary aside#text-2 h2 {
+  border-color: white;
+}
+/* line 38, sass/site/secondary/_widgets.scss */
+#secondary aside#text-2 p {
+  color: white;
+}
+/* line 44, sass/site/secondary/_widgets.scss */
+#secondary aside#text-2 .textwidget p:last-of-type {
+  margin-bottom: 0;
+}
+/* line 48, sass/site/secondary/_widgets.scss */
+#secondary aside#text-2 .textwidget a {
+  background: transparent;
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 11px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid white;
+}
+
+/* line 65, sass/site/secondary/_widgets.scss */
 #secondary aside {
   background: #f9f9f9;
   padding: 20px;
   padding: 2rem;
 }
-/* line 40, sass/site/secondary/_widgets.scss */
+/* line 69, sass/site/secondary/_widgets.scss */
 #secondary aside h2 {
   font-size: 20px;
   font-size: 2rem;
@@ -1738,12 +1767,12 @@ a:hover, a:active {
   border-left: 0;
   line-height: 1;
 }
-/* line 54, sass/site/secondary/_widgets.scss */
+/* line 83, sass/site/secondary/_widgets.scss */
 #secondary aside ul li a {
   color: #2a292c;
   transition: color 500ms ease-in-out;
 }
-/* line 58, sass/site/secondary/_widgets.scss */
+/* line 87, sass/site/secondary/_widgets.scss */
 #secondary aside ul li a:hover, #secondary aside ul li a:focus, #secondary aside ul li a:active {
   color: #902829;
 }
@@ -3567,26 +3596,26 @@ h2 {
   content: "";
   background: url(assets/question.svg);
 }
-/* line 1282, sass/layout/_layout.scss */
-#submit-an-article #article-form .gform_wrapper .gform_body ul li textarea {
+/* line 1284, sass/layout/_layout.scss */
+#submit-an-article #article-form .gform_wrapper .gform_body ul li textarea.small {
   height: 100px;
 }
-/* line 1288, sass/layout/_layout.scss */
+/* line 1291, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 .ginput_container_radio, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 .ginput_container_radio {
   margin-top: 20px;
 }
-/* line 1292, sass/layout/_layout.scss */
+/* line 1295, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 .gfield_description, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 .gfield_description {
   top: 0;
   right: 0;
 }
-/* line 1297, sass/layout/_layout.scss */
+/* line 1300, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 label, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 label {
   position: relative;
   left: 0;
   top: 0;
 }
-/* line 1305, sass/layout/_layout.scss */
+/* line 1308, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li {
   width: 20%;
   line-height: 3;
@@ -3601,15 +3630,15 @@ h2 {
   border-right: 20px solid #f9f9f9;
   transition: all 300ms ease-in-out;
 }
-/* line 1319, sass/layout/_layout.scss */
+/* line 1322, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li:last-of-type, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li:last-of-type {
   border-right: 0;
 }
-/* line 1323, sass/layout/_layout.scss */
+/* line 1326, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li:focus, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li:focus {
   outline: 0;
 }
-/* line 1328, sass/layout/_layout.scss */
+/* line 1331, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li input, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li input {
   padding: 0;
   line-height: 0;
@@ -3617,6 +3646,7 @@ h2 {
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
+  cursor: pointer;
   position: absolute;
   left: 0;
   top: 0;
@@ -3625,57 +3655,62 @@ h2 {
   margin: 0;
   z-index: 1;
 }
-/* line 1345, sass/layout/_layout.scss */
+/* line 1349, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li input:focus, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li input:focus {
   outline: 0;
 }
-/* line 1349, sass/layout/_layout.scss */
+/* line 1353, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li input:checked, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li input:checked {
   background: #902829;
   color: white;
 }
-/* line 1355, sass/layout/_layout.scss */
+/* line 1359, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li label, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li label {
+  position: static;
   line-height: 1.4;
   color: #333;
   left: 0;
   top: 0;
   margin: 0;
 }
-/* line 1363, sass/layout/_layout.scss */
+/* line 1368, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li:hover, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li.active, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li:hover, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li.active {
   background: #902829;
   color: white;
 }
-/* line 1367, sass/layout/_layout.scss */
+/* line 1372, sass/layout/_layout.scss */
 #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li:hover label, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_7 ul li.active label, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li:hover label, #submit-an-article #article-form .gform_wrapper .gform_body ul li#field_5_2 ul li.active label {
   color: white;
 }
-/* line 1380, sass/layout/_layout.scss */
+/* line 1385, sass/layout/_layout.scss */
 #submit-an-article .mce-panel {
   border: 0;
   border: 0;
   background-color: white;
 }
-/* line 1386, sass/layout/_layout.scss */
+/* line 1391, sass/layout/_layout.scss */
+#submit-an-article .mce-panel.mce-tinymce {
+  border: 1px solid #e1e2e2;
+}
+/* line 1395, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-toolbar-grp {
   padding: 10px;
   background: #ffffff;
 }
-/* line 1391, sass/layout/_layout.scss */
+/* line 1400, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-edit-area {
   padding: 0 5px;
   background: white;
 }
-/* line 1396, sass/layout/_layout.scss */
+/* line 1405, sass/layout/_layout.scss */
 #submit-an-article .mce-panel.mce-statusbar {
   background: #F1F2F2;
 }
-/* line 1399, sass/layout/_layout.scss */
+/* line 1408, sass/layout/_layout.scss */
 #submit-an-article .mce-panel.mce-statusbar .mce-path-item {
   font-size: 12px;
 }
-/* line 1404, sass/layout/_layout.scss */
+/* line 1413, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-btn {
   border: 0;
   border-color: transparent transparent transparent transparent;
@@ -3684,7 +3719,7 @@ h2 {
   display: inline-block;
   background-color: transparent;
 }
-/* line 1412, sass/layout/_layout.scss */
+/* line 1421, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-btn button {
   padding: 4px 8px;
   font-size: 14px;
@@ -3697,16 +3732,16 @@ h2 {
   border: 1px solid #eee;
   background: #eee;
 }
-/* line 1426, sass/layout/_layout.scss */
+/* line 1435, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-menu {
   background: #f9f9f9;
 }
-/* line 1430, sass/layout/_layout.scss */
+/* line 1439, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-menu-has-icons i {
   display: inline-block;
   padding: 2px;
 }
-/* line 1435, sass/layout/_layout.scss */
+/* line 1444, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-btn.mce-disabled button {
   cursor: default;
   opacity: 1;
@@ -3717,18 +3752,18 @@ h2 {
   border-color: #f0f0f0;
   color: #eee;
 }
-/* line 1445, sass/layout/_layout.scss */
+/* line 1454, sass/layout/_layout.scss */
 #submit-an-article .mce-panel .mce-btn.mce-disabled button .mce-ico {
   color: #eee;
 }
-/* line 1451, sass/layout/_layout.scss */
+/* line 1460, sass/layout/_layout.scss */
 #submit-an-article .cke {
   margin-bottom: 30px;
   border: 0;
   padding: 26px 0 0 0px;
   background: white;
 }
-/* line 1457, sass/layout/_layout.scss */
+/* line 1466, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_panel_grouptitle {
   cursor: default;
   font-size: 11px;
@@ -3745,7 +3780,7 @@ h2 {
   background-image: none;
   filter: none;
 }
-/* line 1476, sass/layout/_layout.scss */
+/* line 1485, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top {
   border-bottom: 0;
   padding: 10px 10px;
@@ -3755,11 +3790,11 @@ h2 {
   background-image: none;
   filter: none;
 }
-/* line 1485, sass/layout/_layout.scss */
+/* line 1494, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_toolbar_break {
   display: none;
 }
-/* line 1489, sass/layout/_layout.scss */
+/* line 1498, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_toolgroup, #submit-an-article .cke .cke_top .cke_combo_button {
   float: left;
   margin: 0 10px 0px 0;
@@ -3771,7 +3806,7 @@ h2 {
   background-image: none;
   filter: none;
 }
-/* line 1501, sass/layout/_layout.scss */
+/* line 1510, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_combo_off a.cke_combo_button:hover,
 #submit-an-article .cke .cke_top .cke_combo_off a.cke_combo_button:focus {
   background: #ddd;
@@ -3779,7 +3814,7 @@ h2 {
   filter: none;
   outline: 0;
 }
-/* line 1509, sass/layout/_layout.scss */
+/* line 1518, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_combo_off a.cke_combo_button:active,
 #submit-an-article .cke .cke_top .cke_combo_on a.cke_combo_button {
   border: 1px solid #ccc;
@@ -3788,24 +3823,24 @@ h2 {
   background-image: none;
   filter: none;
 }
-/* line 1518, sass/layout/_layout.scss */
+/* line 1527, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_combo_on a.cke_combo_button:hover,
 #submit-an-article .cke .cke_top .cke_combo_on a.cke_combo_button:focus,
 #submit-an-article .cke .cke_top .cke_combo_on a.cke_combo_button:active {
   box-shadow: none;
 }
-/* line 1524, sass/layout/_layout.scss */
+/* line 1533, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_button_on {
   box-shadow: none;
   background: #ddd;
   background-image: none;
   filter: none;
 }
-/* line 1530, sass/layout/_layout.scss */
+/* line 1539, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_button_on:hover, #submit-an-article .cke .cke_top .cke_button_on:focus, #submit-an-article .cke .cke_top .cke_button_on:active {
   box-shadow: none;
 }
-/* line 1537, sass/layout/_layout.scss */
+/* line 1546, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_button_off:hover,
 #submit-an-article .cke .cke_top .cke_button_off:focus,
 #submit-an-article .cke .cke_top .cke_button_off:active,
@@ -3817,7 +3852,7 @@ h2 {
   background-image: none;
   filter: none;
 }
-/* line 1549, sass/layout/_layout.scss */
+/* line 1558, sass/layout/_layout.scss */
 #submit-an-article .cke .cke_top .cke_ltr .cke_button:first-child,
 #submit-an-article .cke .cke_top .cke_rtl .cke_button:last-child {
   border-radius: 0px 0 0 0px;

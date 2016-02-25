@@ -12,7 +12,7 @@
 ?>
 
 
-	<?php if( have_rows('cta', 'option') ): ?>
+	<?php if(!is_home()) : if( have_rows('cta', 'option') ): ?>
 	<div id="cta">
 
 		<div class="inner">
@@ -34,7 +34,7 @@
 		</div>
 
 	</div>
-	<?php endif; ?>
+	<?php endif; endif; ?>
 
 	<footer id="footer" class="site-footer" role="contentinfo">
 		

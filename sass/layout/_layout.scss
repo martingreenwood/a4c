@@ -1280,7 +1280,10 @@ h2 {
 						}
 
 						textarea {
-							height: 100px;
+
+							&.small {
+								height: 100px;
+							}
 						}
 
 						&#field_5_7, &#field_5_2 {
@@ -1332,6 +1335,7 @@ h2 {
 										-moz-appearance: none;
 										-ms-appearance: none;
 										appearance: none;
+										cursor: pointer;
 
 										position: absolute;
 										left: 0;
@@ -1353,6 +1357,7 @@ h2 {
 									}
 
 									label {
+										position: static;
 										line-height: 1.4;
 										color: #333;
 										left: 0;
@@ -1382,6 +1387,10 @@ h2 {
 	    border: 0;
 		background-color: white;
 		//padding-top: 28px;
+
+		&.mce-tinymce {
+			border: 1px solid #e1e2e2;
+		}
 
 		.mce-toolbar-grp {
 			padding: 10px;
