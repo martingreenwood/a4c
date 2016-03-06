@@ -61,7 +61,7 @@
 
 		<div class="credit inner">
 			<span>
-				<a href="<?php echo esc_url( __( 'http://www.pixelpudu.com/', 'a4c' ) ); ?>"><?php printf( esc_html__( 'Built by  %s', 'a4c' ), 'Pixel Pudu' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://www.pixelpudu.com/', 'a4c' ) ); ?>"><?php printf( esc_html__( 'Design &smp; Build / %s', 'a4c' ), 'Pixel Pudu' ); ?></a>
 			</span>
 		</div>
 

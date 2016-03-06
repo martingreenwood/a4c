@@ -36,11 +36,11 @@ $j(window).scroll(function() {
 }); 
 
 // REMOVE LOADERING SCREEN ONCE LOADED
-$j(window).load(function() {
-	$j('#loader').fadeOut('fast', function() {
-		$j(this).remove();
-	});
-});
+//$j(window).load(function() {
+//	$j('#loader').fadeOut('fast', function() {
+//		$j(this).remove();
+//	});
+//});
 
 // PLAY VIDEO ON BUTTON PRESS
 $j(function() {

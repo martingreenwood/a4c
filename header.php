@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?> id="<?php echo $pagename; ?>">
 
-<div id="loader">
+<?php /* <div id="loader">
 
 	<div class="mikepad-loading">
 		<div class="binding"></div>
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 
-</div>
+</div> */ ?>
 
 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
